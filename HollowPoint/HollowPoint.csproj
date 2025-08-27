@@ -1,341 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{94380117-47DD-4C2B-9C81-3B477415AFBF}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HollowPoint</RootNamespace>
-    <AssemblyName>HollowPoint</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>7.3</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\Refs15\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="MMHOOK_Assembly-CSharp">
-      <HintPath>..\..\Refs15\MMHOOK_Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Utils">
-      <HintPath>..\..\Refs15\MonoMod.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.RuntimeDetour">
-      <HintPath>..\..\Refs15\MonoMod.RuntimeDetour.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>..\..\Refs15\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PlayMaker, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\PlayMaker.dll</HintPath>
-    </Reference>
-    <Reference Include="System.XML" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\Refs15\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.AudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\Refs15\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.ImageConversionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>..\..\Refs15\UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>..\..\Refs15\UnityEngine.Physics2DModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.PhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.TextRenderingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Refs15\UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Vasi">
-      <HintPath>..\..\Refs15\Vasi.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AudioHandler.cs" />
-    <Compile Include="BulletBehaviour.cs" />
-    <Compile Include="CustomWeapons.cs" />
-    <Compile Include="DamageOverride.cs" />
-    <Compile Include="HollowPointEnums.cs" />
-    <Compile Include="HeatHandler.cs" />
-    <Compile Include="AttackHandler.cs" />
-    <Compile Include="HudController.cs" />
-    <Compile Include="HollowPointPrefabs.cs" />
-    <Compile Include="OrientationHandler.cs" />
-    <Compile Include="Init.cs" />
-    <Compile Include="SpellControlOverride.cs" />
-    <Compile Include="SpriteHandler.cs" />
-    <Compile Include="Stats.cs" />
-    <Compile Include="WeaponHandler.cs" />
-    <Compile Include="LoadAssets.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIHandler.cs" />
-    <Compile Include="SoundHandler.cs" />
-    <Compile Include="WavUtility.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_rifle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\glow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\muzzleflash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sprite_bullet_soul.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_rifle.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\enemyhurt1.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\enemydead1.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\enemyhurt2.wav" />
-    <EmbeddedResource Include="assets\enemyhurt3.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\enemydead2.wav" />
-    <EmbeddedResource Include="assets\enemydead3.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\bulletCasingSprite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\impact_01.wav" />
-    <EmbeddedResource Include="assets\impact_02.wav" />
-    <EmbeddedResource Include="assets\impact_03.wav" />
-    <EmbeddedResource Include="assets\impact_04.wav" />
-    <EmbeddedResource Include="assets\impact_05.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\draw.wav" />
-    <EmbeddedResource Include="assets\holster.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\anim.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\heatbarsprite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_shotgun.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\bulletSpriteFade.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_smg.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\heatbarspriteestimate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\heatbarborder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_sniper.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\exampletext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\energybarborder.png" />
-    <EmbeddedResource Include="assets\energybarsprite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\specialbullet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\divedetonate.wav" />
-    <EmbeddedResource Include="assets\divetrigger.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\lightflash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\firerocket.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\subsonicsfx.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_draw.wav" />
-    <EmbeddedResource Include="assets\weapon_holster.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\mortarclose.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\mortarexplosion.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\airstrikeinbound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_flare.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\airstrikeend.wav" />
-    <EmbeddedResource Include="assets\airstrikerequest.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\textchanges.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\cantfire.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\flarebullet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\furybullet.png" />
-    <EmbeddedResource Include="assets\shadebullet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\focussound.wav" />
-    <EmbeddedResource Include="assets\infusionsound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_pistol.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\enemyhurt4.wav" />
-    <EmbeddedResource Include="assets\enemyhurt5.wav" />
-    <EmbeddedResource Include="assets\enemyhurt6.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\hudicon_cardinal.png" />
-    <EmbeddedResource Include="assets\hudicon_omni.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\hudicon_adrenaline5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\hudicon_adrenaline0.png" />
-    <EmbeddedResource Include="assets\hudicon_adrenaline1.png" />
-    <EmbeddedResource Include="assets\hudicon_adrenaline2.png" />
-    <EmbeddedResource Include="assets\hudicon_adrenaline3.png" />
-    <EmbeddedResource Include="assets\hudicon_adrenaline4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_gatlinggun.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\muzzleflashAlt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_carbine.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_lmg.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_dmr.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_sniper.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_rifle_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_lmg.png" />
-    <EmbeddedResource Include="assets\weapon_sprite_lmg_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_sniper_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_dmr.png" />
-    <EmbeddedResource Include="assets\weapon_sprite_dmr_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_shotgun.png" />
-    <EmbeddedResource Include="assets\weapon_sprite_shotgun_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_carbine.png" />
-    <EmbeddedResource Include="assets\weapon_sprite_carbine_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\weapon_sprite_smg.png" />
-    <EmbeddedResource Include="assets\weapon_sprite_smg_nohands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sprite_bullet_dagger.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sfx_daggerthrow_01.wav" />
-    <EmbeddedResource Include="assets\sfx_daggerthrow_02.wav" />
-    <EmbeddedResource Include="assets\sfx_daggerthrow_03.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sprite_bullet_dung.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\hudicon_cancastnailart_false.png" />
-    <EmbeddedResource Include="assets\hudicon_cancastnailart_true.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sfx_fireselect.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\sprite_bullet_voids.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="assets\shoot_sfx_shrapnel.wav" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="$(MSBuildProjectDirectory)/../LocalProperties.props" />
+
+	<PropertyGroup>
+		<AssemblyName>HollowPoint</AssemblyName>
+		<RootNamespace>HollowPoint</RootNamespace>
+		<AssemblyVersion>1.4.0.1</AssemblyVersion>
+
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>latest</LangVersion>
+
+		<AnalysisLevel>latest</AnalysisLevel>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' != 'Debug'">
+		<PathMap>$(MSBuildProjectDirectory)=src</PathMap>
+		<Deterministic>true</Deterministic>
+		<PlatformTarget>x64</PlatformTarget>
+
+		<SignAssembly Condition="'$(SignKeyFile)' != ''">true</SignAssembly>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Using Include="UnityEngine.Random" Alias="URandom" />
+		<Using Include="UnityEngine.Debug" Alias="UDebug" />
+		<Using Include="UnityEngine.Object" Alias="UObject" />
+		<Using Include="UnityEngine.SceneManagement.SceneManager" Alias="USceneMgr" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="$(HKRefs)/*.dll" Private="True" />
+		<Reference Include="$(HKModRefs)/Vasi/Vasi.dll" Private="True" />
+
+		<EmbeddedResource Include="$(MSBuildProjectDirectory)/assets/*" WithCulture="False" />
+	</ItemGroup>
 </Project>

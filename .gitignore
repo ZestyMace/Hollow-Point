@@ -1,5 +1,5 @@
-HollowPoint/bin/*
-HollowPoint/assets/*
-HollowPoint/obj/*
+**/bin/
+**/obj/
 
-.vs/
+/.vs/
+/LocalProperties.props
