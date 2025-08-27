@@ -21,7 +21,7 @@ public static class HollowPointEnums
 
     public enum GunType
     {
-        Primary, 
+        Primary,
         Secondary,
     }
 

@@ -1,18 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
-using Vasi;
-using HollowPoint.Components;
+﻿using HollowPoint.Components;
 using HollowPoint.Util;
+using System.Collections;
+using UnityEngine;
+using Vasi;
 
 namespace HollowPoint;
 
 public sealed class BulletBehaviour : MonoBehaviour
 {
-    Rigidbody2D rb2d = null!;
-    BoxCollider2D bc2d = null!;
-    SpriteRenderer bulletSpriteRenderer = null!;
-    HealthManager hm = null!;
-    double xDeg, yDeg;
+    private Rigidbody2D rb2d = null!;
+    private BoxCollider2D bc2d = null!;
+    private SpriteRenderer bulletSpriteRenderer = null!;
+    private HealthManager hm = null!;
+    private double xDeg, yDeg;
     public float bulletSpeed = 25;
 
     public string specialAttrib = null!;
@@ -42,8 +42,8 @@ public sealed class BulletBehaviour : MonoBehaviour
     public bool enableSoulParticles = true;
     public bool playSoundOnSurfaceHit = true;
     public bool canGainEnergyCharges = true;
-    static float bulletPivot = 0;
-    static bool bulletBias = true;
+    private static float bulletPivot = 0;
+    private static bool bulletBias = true;
 
     public Vector3 bulletOriginPosition;
     public Vector3 gameObjectScale = new(1.2f, 1.2f, 0);
@@ -52,8 +52,7 @@ public sealed class BulletBehaviour : MonoBehaviour
     //TODO: Clean this up, and the bullet types too with structs instead
     public Gun gunUsed;
     public BulletSpriteType bulletSprite = BulletSpriteType.soul;
-
-    static System.Random rand = new();
+    private static System.Random rand = new();
 
     public static HitInstance bulletDummyHitInstance = new()
     {
@@ -123,7 +122,7 @@ public sealed class BulletBehaviour : MonoBehaviour
 
         if (enableSoulParticles)
         {
-            string particlePrefabName = (useDefaultParticles) ? "SpellParticlePrefab" : "GrimmParticlePrefab";
+            string particlePrefabName = useDefaultParticles ? "SpellParticlePrefab" : "GrimmParticlePrefab";
             GameObject fireballParticles = HollowPointPrefabs.SpawnObjectFromDictionary(particlePrefabName, gameObject.transform.position, Quaternion.identity);
             fireballParticles.AddComponent<ParticlesController>().parent = gameObject;
             //fireballParticles.GetComponent<ParticlesController>().size = bullet.size;
@@ -131,11 +130,11 @@ public sealed class BulletBehaviour : MonoBehaviour
         }
 
         // +---| Bullet Heat |---+
-        float deviationFromHeat = (noHeat) ? 0 : (float)Math.Pow(HeatHandler.currentHeat, 2f) / 500; //exponential
-        deviationFromHeat *= (PlayerData.instance.equippedCharm_37) ? 1.25f : 1.15f; //Increase movement penalty when equipping sprint master
+        float deviationFromHeat = noHeat ? 0 : (float)Math.Pow(HeatHandler.currentHeat, 2f) / 500; //exponential
+        deviationFromHeat *= PlayerData.instance.equippedCharm_37 ? 1.25f : 1.15f; //Increase movement penalty when equipping sprint master
         deviationFromHeat -= (PlayerData.instance.equippedCharm_14 && HeroController.instance.cState.onGround) ? 18 : 0; //Decrease innacuracy when on ground and steady body is equipped
 
-        float deviation = (perfectAccuracy) ? 0 : (deviationFromHeat);
+        float deviation = perfectAccuracy ? 0 : deviationFromHeat;
         deviation = Mathf.Clamp(deviation, 0, 20); //just set up the minimum value, bullets starts acting weird when deviation is negative
         //deviation = (deviation < 0) ? 0 : deviation; 
 
@@ -144,7 +143,7 @@ public sealed class BulletBehaviour : MonoBehaviour
         bulletPivot = Mathf.Clamp(bulletPivot, deviation * -1, deviation); //Clamps the max/min deviation, shrinking the cone of fire
         //float bulletPivotDelta = rand.Next(0, 2) * 2 - 1; //gives either -1 or 1
         bulletBias = !bulletBias;
-        float bulletPivotDelta = (bulletBias) ? 1 : -1;
+        float bulletPivotDelta = bulletBias ? 1 : -1;
         bulletPivotDelta = (bulletPivot >= deviation || bulletPivot <= (deviation * -1)) ? bulletPivotDelta * -1 : bulletPivotDelta;
         bulletPivot += bulletPivotDelta * rand.Next(Stats.instance.current_minWeaponSpreadFactor, Stats.instance.current_minWeaponSpreadFactor + 5); //1 can be changed by the amount of distance each bullet deviation should have
         float degree = bulletDegreeDirection + Mathf.Clamp(bulletPivot, deviation * -1, deviation); ;
@@ -157,7 +156,7 @@ public sealed class BulletBehaviour : MonoBehaviour
         if (HeroController.instance.cState.wallSliding)
         {
             xDeg *= -1;
-            degree = (HeroController.instance.cState.facingRight) ? ((degree <= 90 ? 180 : -180) - degree) : (180 - degree);
+            degree = HeroController.instance.cState.facingRight ? ((degree <= 90 ? 180 : -180) - degree) : (180 - degree);
         }
 
         rb2d.velocity = new Vector2((float)xDeg, (float)yDeg); //Bullet speed
@@ -165,13 +164,13 @@ public sealed class BulletBehaviour : MonoBehaviour
     }
 
     //Destroy the artillery shell when it hits the destination
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (fuseTimerXAxis && gameObject.transform.position.y < targetDestination.y) Destroy(gameObject);
     }
 
     //Handles the colliders
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         hm = col.GetComponentInChildren<HealthManager>();
         bulletDummyHitInstance.Source = gameObject;
@@ -194,8 +193,8 @@ public sealed class BulletBehaviour : MonoBehaviour
                 bulletDummyHitInstance.Direction = 270f;
                 br.Hit(bulletDummyHitInstance);
             }
-            if(playSoundOnSurfaceHit) AudioHandler.instance.PlayMiscSoundEffect(AudioHandler.HollowPointSoundType.TerrainHitSFXGO);
-            if(!piercesWalls) Destroy(gameObject, 0.04f);
+            if (playSoundOnSurfaceHit) AudioHandler.instance.PlayMiscSoundEffect(AudioHandler.HollowPointSoundType.TerrainHitSFXGO);
+            if (!piercesWalls) Destroy(gameObject, 0.04f);
         }
     }
 
@@ -233,17 +232,16 @@ public sealed class BulletBehaviour : MonoBehaviour
 //Attaches itself to an enemy with a Health Manager
 public class EnemyDamageOvertime : MonoBehaviour
 {
-    int stack;
-    int damage;
-    float tick;
-    float duration;
-    HealthManager hm = null!;
-    GameObject particles = null!;
-    ParticleSystem particleSystem = null!;
+    private int stack;
+    private int damage;
+    private float tick;
+    private float duration;
+    private HealthManager hm = null!;
+    private GameObject particles = null!;
+    private ParticleSystem particleSystem = null!;
+    private bool playFireAnim = false;
 
-    bool playFireAnim = false;
-
-    void Start()
+    private void Start()
     {
         try
         {
@@ -268,13 +266,13 @@ public class EnemyDamageOvertime : MonoBehaviour
             //Log("ENEMY SIZE IS " + enemySize);
             //gameObject.GetComponent<SetParticleScale>().transform.localScale = enemySize - new Vector2(0.3f, 0.3f);
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Log.Error("DamageOvertime: {0}", e);
         }
     }
 
-    void Update()
+    private void Update()
     {
         tick -= Time.deltaTime * 1f;
         duration -= Time.deltaTime * 1f;
@@ -289,19 +287,19 @@ public class EnemyDamageOvertime : MonoBehaviour
             duration = 3f;
             stack--;
         }
-        if(stack <= 0 && playFireAnim)
+        if (stack <= 0 && playFireAnim)
         {
             particleSystem.Stop();
             playFireAnim = false;
         }
     }
 
-    void DamageEnemy()
+    private void DamageEnemy()
     {
         if (hm == null)
         {
             Log.Warn("Game Object/HealthManager null, cannot apply damage overtime");
-            stack = 0;             
+            stack = 0;
             return;
         }
 
@@ -325,7 +323,7 @@ public class EnemyDamageOvertime : MonoBehaviour
     {
         Log.Debug("Increasing Damage Stack");
         if (stack < 3) stack++;
-       
+
         duration = 2f;
     }
 
@@ -336,13 +334,13 @@ public sealed class ParticlesController : MonoBehaviour
 {
     public GameObject parent = null!;
     public float rateOverTimeMultiplier = 30f;
-    ParticleSystemRenderer particleSystemRenderer = null!;
-    ParticleSystem particleSystem = null!;
-    SetParticleScale setParticleScale = null!;
-    bool toBeDestroyed = false;
+    private ParticleSystemRenderer particleSystemRenderer = null!;
+    private ParticleSystem particleSystem = null!;
+    private SetParticleScale setParticleScale = null!;
+    private bool toBeDestroyed = false;
     public Vector2 size = new(0.2f, 0.2f);
 
-    void Start()
+    private void Start()
     {
         //Log("BulletBehaviour:FireballParticlesProperties Start()");
         //Array.ForEach<Component>(gameObject.GetComponents<Component>(), x => Log(x));
@@ -356,7 +354,7 @@ public sealed class ParticlesController : MonoBehaviour
         setParticleScale.transform.localScale = size;
     }
 
-    void Update()
+    private void Update()
     {
         if (parent == null)
         {
@@ -437,6 +435,6 @@ public sealed class BulletIsExplosive : MonoBehaviour
             }
             else if (PlayerData.instance.fireballLevel > 1) explosionClone.transform.localScale = new Vector3(1.3f, 1.3f, 0);
             else explosionClone.transform.localScale = new Vector3(0.7f, 0.7f, 0);
-        }       
+        }
     }
 }

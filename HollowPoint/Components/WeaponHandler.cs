@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using HollowPoint.Util;
+using System.Collections;
 using UnityEngine;
-using static HollowPoint.HollowPointEnums;
 using Vasi;
-using HollowPoint.Util;
+using static HollowPoint.HollowPointEnums;
 
 
 namespace HollowPoint.Components;
@@ -16,16 +16,15 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
 
     public WeaponType currentWeapon = WeaponType.Melee;
     public Gun currentEquippedGun;
-    SpriteRenderer gunSpriteRenderer = null!;
+    private SpriteRenderer gunSpriteRenderer = null!;
 
     public Dictionary<WeaponModifierName, Gun> weaponModifierDictionary = [];
+    private const float DEFAULT_ATTACK_SPEED = 0.41f;
+    private const float DEFAULT_ATTACK_SPEED_CH = 0.25f;
+    private const float DEFAULT_ANIMATION_SPEED = 0.35f;
+    private const float DEFAULT_ANIMATION_SPEED_CH = 0.28f;
 
-    const float DEFAULT_ATTACK_SPEED = 0.41f;
-    const float DEFAULT_ATTACK_SPEED_CH = 0.25f;
-    const float DEFAULT_ANIMATION_SPEED = 0.35f;
-    const float DEFAULT_ANIMATION_SPEED_CH = 0.28f;
-
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
             instance = this;
@@ -50,7 +49,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
     public Gun EquipWeapon()
     {
         //List of charms with conversion kits attached to them
-        List<int> conversionCharms = new List<int>() { 11, 13, 15, 18, 20, 32 };
+        List<int> conversionCharms = [11, 13, 15, 18, 20, 32];
         List<int> equippedCharms = PlayerData.instance.equippedCharms;
 
         //Check the list of intersecting charms, if theres more than 2 then the player is not allowed to fire
@@ -143,7 +142,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
 
     public WeaponSubClass ChangeClass(WeaponSubClass wsc)
     {
-        List<int> classConversionCharms = new List<int>() { 3, 14, 17 }; //Compass, Grub, Spore
+        List<int> classConversionCharms = [3, 14, 17]; //Compass, Grub, Spore
         List<int> equippedCharms = PlayerData.instance.equippedCharms;
         //if (equippedCharms.Count < 1) return wsc;
         List<int> equippedConversionCharms = classConversionCharms.Intersect(equippedCharms).ToList();
@@ -193,7 +192,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
         HeroController.instance.spellControl.SetState("Inactive");
     }
 
-    void ChangeWeaponSprite(WeaponType wt)
+    private void ChangeWeaponSprite(WeaponType wt)
     {
         string spriteName = "";
         try
@@ -223,7 +222,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
     }
 
     //Swap between guns or nail
-    void SwapBetweenNail()
+    private void SwapBetweenNail()
     {
         WeaponType prevWep = currentWeapon;
         currentWeapon = currentWeapon == WeaponType.Melee ? WeaponType.Ranged : WeaponType.Melee;
@@ -249,7 +248,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
         }
     }
 
-    void CreateGuns()
+    private void CreateGuns()
     {
         Log.Info("Creating Gun Structs");
 

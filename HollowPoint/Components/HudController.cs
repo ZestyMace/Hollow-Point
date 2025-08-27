@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using HollowPoint.Util;
+﻿using HollowPoint.Util;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -32,7 +32,7 @@ internal sealed class HudController : MonoBehaviour
         "hudicon_cancastnailart_false.png"
     ];
 
-    void Start()
+    private void Start()
     {
         Log.Info("INTIALIZING HUDCONTROLLER");
         var prefab = GameManager.instance.inventoryFSM.gameObject.transform.Find("Inv").Find("Inv_Items").Find("Geo").gameObject;
@@ -64,7 +64,7 @@ internal sealed class HudController : MonoBehaviour
             var fireModeText = directionalFireModeHudIcon.GetComponent<DisplayItemAmount>().textObject;
 
             directionalFireModeHudIcon.GetComponent<SpriteRenderer>().sprite = hudSpriteDictionary[firemode];
-            Color color = new Color(0.55f, 0.55f, 0.55f);
+            Color color = new(0.55f, 0.55f, 0.55f);
             StartCoroutine(BadAnimation(fireModeText, "", color));
         }
         catch (Exception e)
@@ -146,7 +146,7 @@ internal sealed class HudController : MonoBehaviour
             var canNailArtText = canNailArtHudIcon.GetComponent<DisplayItemAmount>().textObject;
 
             canNailArtHudIcon.GetComponent<SpriteRenderer>().sprite = hudSpriteDictionary["hudicon_cancastnailart_" + obj + ".png"];
-            Color color = new Color(0.55f, 0.55f, 0.55f);
+            Color color = new(0.55f, 0.55f, 0.55f);
             StartCoroutine(BadAnimation(canNailArtText, "", color));
         }
         catch (Exception e)
@@ -155,7 +155,7 @@ internal sealed class HudController : MonoBehaviour
         }
     }
 
-    IEnumerator BadAnimation(TextMeshPro shardText, string amount, Color color)
+    private IEnumerator BadAnimation(TextMeshPro shardText, string amount, Color color)
     {
         shardText.text = amount;
         shardText.color = color;
@@ -177,7 +177,7 @@ internal sealed class HudController : MonoBehaviour
         return go;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         Stats.fireModeIcon -= UpdateFireModeIcon;
         Stats.adrenalineChargeIcons -= UpdateAdrenalineIcon;

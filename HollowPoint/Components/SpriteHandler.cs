@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
-using GlobalEnums;
-using static HollowPoint.HollowPointEnums;
+﻿using GlobalEnums;
 using HollowPoint.Util;
+using System.Collections;
+using UnityEngine;
+using static HollowPoint.HollowPointEnums;
 
 namespace HollowPoint.Components;
 
@@ -15,15 +15,13 @@ internal sealed class HollowPointSprites : MonoBehaviour
     public static GameObject muzzleFlashGO = null!;
     public static GameObject muzzleFlashGOAlt = null!;
     public static GameObject whiteFlashGO = null!;
-
-    static System.Random rand = new();
-    static private Vector3 defaultWeaponPos = new(-0.2f, -0.84f, -0.0001f);
-
-    int rotationNum = 0;
+    private static System.Random rand = new();
+    private static Vector3 defaultWeaponPos = new(-0.2f, -0.84f, -0.0001f);
+    private int rotationNum = 0;
 
     public static float lowerGunTimer = 0;
-    float spriteRecoilHeight = 0;
-    float spriteSprintDropdownHeight = 0;
+    private float spriteRecoilHeight = 0;
+    private float spriteSprintDropdownHeight = 0;
 
     public static bool isFiring = false;
     public static bool startFiringAnim = false;
@@ -31,15 +29,14 @@ internal sealed class HollowPointSprites : MonoBehaviour
     public static bool isWallClimbing = false;
     public static bool facingNorthFirstTime = false;
     public static bool altMuzzleflash = false;
-    static bool lowerGunCoroutineActive = false;
+    private static bool lowerGunCoroutineActive = false;
 
     public static HeroActions ha = null!;
 
     public static GameObject transformSlave = null!;
     public static Transform ts = null!;
-
-    bool isSprinting = false;
-    bool? prevFaceRightVal;
+    private bool isSprinting = false;
+    private bool? prevFaceRightVal;
 
     private tk2dSpriteAnimator tk2d = null!;
 
@@ -52,7 +49,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
     }
 
     //Initalizes the sprite game objects
-    IEnumerator SpriteRoutine()
+    private IEnumerator SpriteRoutine()
     {
         do
         {
@@ -112,7 +109,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
     public static GameObject CreateGameObjectSprite(string spriteName, string gameObjectName, float pixelsPerUnit)
     {
         LoadAssets.spriteDictionary.TryGetValue(spriteName, out Texture2D texture);
-        GameObject gameObjectWithSprite = new GameObject(gameObjectName, typeof(SpriteRenderer));
+        GameObject gameObjectWithSprite = new(gameObjectName, typeof(SpriteRenderer));
         gameObjectWithSprite.GetComponent<SpriteRenderer>().sprite = Sprite.Create(texture,
             new Rect(0, 0, texture.width, texture.height),
             new Vector2(0.5f, 0.5f), pixelsPerUnit);
@@ -202,7 +199,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
         }
     }
 
-    static float currentDegree = 0;
+    private static float currentDegree = 0;
 
     public void SprintAnim()
     {
@@ -252,7 +249,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
         }
     }
 
-    void WeaponBehindBack()
+    private void WeaponBehindBack()
     {
         if (BadAnimFace())
         {
@@ -277,7 +274,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
     }
 
     //Player is facing the front, not like, hes literally staring in front, like when they enter a room thats not either left or right
-    bool BadAnimFace()
+    private bool BadAnimFace()
     {
         //Log(HeroController.instance.GetComponent<tk2dSpriteAnimator>().CurrentClip.name); //ENTER = when the player enters
         string animName = tk2d.CurrentClip.name;
@@ -303,7 +300,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
         return animName.Contains("Enter") || animName.Contains("Challenge") || animName.Contains("Prostrate");
     }
 
-    bool BadStareDown()
+    private bool BadStareDown()
     {
         //Log(HeroController.instance.GetComponent<tk2dSpriteAnimator>().CurrentClip.name); //ENTER = when the player enters
         string animName = tk2d.CurrentClip.name;
@@ -312,7 +309,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
     }
 
     //================================ ANIMATION COROUTINES ======================================== 
-    IEnumerator SprintingShake()
+    private IEnumerator SprintingShake()
     {
         spriteSprintDropdownHeight = 0;
         //Log("[SPRITEHANDLER] STARTING SprintingShake()");
@@ -325,7 +322,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
         }
     }
 
-    IEnumerator SprintingShakeRotation()
+    private IEnumerator SprintingShakeRotation()
     {
         //Log("[SPRITEHANDLER] STARTING SprintingRotation()");
 
@@ -349,7 +346,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
         }
     }
 
-    IEnumerator ShootAnimation(float degreeDirection)
+    private IEnumerator ShootAnimation(float degreeDirection)
     {
         //Log("[SPRITEHANDLER] STARTING ShootAnimation()");
         float face = HeroController.instance.cState.facingRight ? 1 : -1;
@@ -366,7 +363,7 @@ internal sealed class HollowPointSprites : MonoBehaviour
     //==================================Utilities==================================================
     //returns the degree of the gun's sprite depending on what the player inputs while shooting
     //basically it just rotates the gun based on shooting direction
-    static float SpriteRotation()
+    private static float SpriteRotation()
     {
         float gunRotation = 0;
         if (!(ha.right.IsPressed || ha.left.IsPressed) || Stats.instance.cardinalFiringMode)
@@ -511,8 +508,9 @@ internal sealed class GunSpriteRenderer : MonoBehaviour
         }
     }
 
-    string prevAnim = "";
-    bool MakeGunVisibleCheck()
+    private string prevAnim = "";
+
+    private bool MakeGunVisibleCheck()
     {
         /*I am gonna say it now, this is probably singlehandedly one of the worst thing ive ever written in this mod, i have no idea where to
           find anim that handles getting new abilities and i am not gonna bother because its probably tucked into a hundred individual FSMs

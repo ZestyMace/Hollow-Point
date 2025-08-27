@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using static HollowPoint.HollowPointEnums;
 using Vasi;
+using static HollowPoint.HollowPointEnums;
 
 namespace HollowPoint.Components;
 
@@ -13,9 +13,8 @@ internal sealed class AttackHandler : MonoBehaviour
 
     public static bool isFiring = false;
     public static bool slowWalk = false;
-
-    static float slowWalkDisableTimer = 0;
-    float clickTimer = 0;
+    private static float slowWalkDisableTimer = 0;
+    private float clickTimer = 0;
 
     public HeroControllerStates h_state = null!;
     public HeroController hc_instance = null!;
@@ -104,7 +103,7 @@ internal sealed class AttackHandler : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (slowWalkDisableTimer > 0 && slowWalk)
         {
@@ -246,7 +245,7 @@ internal sealed class AttackHandler : MonoBehaviour
         float coneSpread = 40;
         float coneSpreadDelta = coneSpread / (pellets + 1);
         float direction = OrientationHandler.finalDegreeDirection;
-        float coneStart = direction - coneSpread / 2;
+        float coneStart = direction - (coneSpread / 2);
         float pelletSpawnDegree = coneStart + coneSpreadDelta;
 
         DirectionalOrientation orientation = OrientationHandler.directionOrientation;

@@ -1,37 +1,34 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using HollowPoint.Util;
 using HutongGames.PlayMaker;
 using HutongGames.PlayMaker.Actions;
-using static HollowPoint.HollowPointEnums;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
+using System.Collections;
 using System.Reflection;
+using UnityEngine;
 using Vasi;
-using HollowPoint.Util;
+using static HollowPoint.HollowPointEnums;
 
 
 namespace HollowPoint.Components;
 
 internal sealed class SpellControlOverride : MonoBehaviour
 {
-    PlayMakerFSM nailArtFSM = null!;
-    PlayMakerFSM glowingWombFSM = null!;
-
-    float grenadeCooldown = 30f;
-    float airstrikeCooldown = 300f;
-    float typhoonTimer = 20f;
-
-    static PlayMakerFSM soulOrbFSM = null!;
-    PlayMakerFSM spellControlFSM = null!;
+    private PlayMakerFSM nailArtFSM = null!;
+    private PlayMakerFSM glowingWombFSM = null!;
+    private float grenadeCooldown = 30f;
+    private float airstrikeCooldown = 300f;
+    private float typhoonTimer = 20f;
+    private static PlayMakerFSM soulOrbFSM = null!;
+    private PlayMakerFSM spellControlFSM = null!;
     public static GameObject sharpFlash = null!;
     public static GameObject focusBurstAnim = null!;
-
-    static GameObject infusionSoundGO = null!;
+    private static GameObject infusionSoundGO = null!;
 
     private static ILHook removeFocusCost = null!;
     public static FsmInt canUseSpellOrbHighlight = 0;
 
-    void Awake()
+    private void Awake()
     {
         StartCoroutine(InitSpellControl());
         StartCoroutine(ModifySoulOrbFSM());
@@ -65,7 +62,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
         //PlayerData.instance.focusMP_amount = 15;
     }
 
-    static void RemoveFocusSoulCost(ILContext il)
+    private static void RemoveFocusSoulCost(ILContext il)
     {
         Log.Debug("Removing Focus Cost");
         var cursor = new ILCursor(il).Goto(0);
@@ -425,7 +422,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (OrientationHandler.pressingAttack && typhoonTimer > 0)
         {
@@ -437,7 +434,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (grenadeCooldown > 0) grenadeCooldown -= Time.deltaTime * 30f;
 
@@ -524,7 +521,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
             Stats.instance.enemyList.RemoveAll(enemy => enemy == null);
 
             //Create a list of valid targets from the enemy list, meaning anyone closer than 10 units
-            List<GameObject> validTargets = new List<GameObject>();
+            List<GameObject> validTargets = [];
             while (Stats.instance.enemyList.Count <= 0 || HeroController.instance.cState.transitioning) yield return null;
             foreach (GameObject enemy in Stats.instance.enemyList)
             {
@@ -579,7 +576,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
     public static IEnumerator ScreamAbility_CreepingAirburst(int charges)
     {
         Vector3 targetCoordinates = HeroController.instance.transform.position;
-        int totalShells = 2 + 1 * charges;
+        int totalShells = 2 + (1 * charges);
         int artyDirection = HeroController.instance.cState.facingRight ? 1 : -1;
         float shellAimPosition = 5 * artyDirection; //Allows the shell to "walk" slowly infront of the player
         AudioHandler.instance.PlayMiscSoundEffect(AudioHandler.HollowPointSoundType.MortarWhistleSFXGO, alteredPitch: false);
@@ -601,7 +598,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
 
     }
 
-    IEnumerator QuakeAbility_SporeRelease(int charges)
+    private IEnumerator QuakeAbility_SporeRelease(int charges)
     {
         Vector3 spawnPos = HeroController.instance.transform.position;
         float pulseAmount = 2 * charges;
@@ -667,7 +664,7 @@ internal sealed class SpellControlOverride : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         Log.Debug("SpellControl Destroyed");
     }

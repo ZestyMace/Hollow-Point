@@ -1,22 +1,21 @@
-﻿using Modding;
+﻿using HollowPoint.Util;
+using Modding;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using HollowPoint.Util;
 
 namespace HollowPoint.Components;
 
 internal sealed class UIHandler : MonoBehaviour
 {
-    GameObject canvas = null!;
-    CanvasGroup canvasGroup = null!;
-    Text grenadeAmountText = null!;
-    Text firesupportAmountText = null!;
-
-    static int artifactDisplayPowerPercent = 0;
-    static int grenadeAmnt = 0;
-    static float fadeOutTimer = 0f;
-    float alpha = 0;
+    private GameObject canvas = null!;
+    private CanvasGroup canvasGroup = null!;
+    private Text grenadeAmountText = null!;
+    private Text firesupportAmountText = null!;
+    private static int artifactDisplayPowerPercent = 0;
+    private static int grenadeAmnt = 0;
+    private static float fadeOutTimer = 0f;
+    private float alpha = 0;
 
     public Image heatbarImage = null!;
     public Image energybarImage = null!;
@@ -138,7 +137,7 @@ internal sealed class UIHandler : MonoBehaviour
     } 
     */
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
 
         if (fadeOutTimer > 0)
@@ -154,7 +153,7 @@ internal sealed class UIHandler : MonoBehaviour
         {
             if (HeroController.instance.cState.transitioning) alpha = 0f;
 
-            Color c = new Color(1, 1, 1, alpha);
+            Color c = new(1, 1, 1, alpha);
 
             grenadeAmountText.color = c;
             firesupportAmountText.color = c;
@@ -181,10 +180,10 @@ public sealed class HP_DamageNumber : MonoBehaviour
 {
     public static GameObject damageNumberGO = null!;
     public static GameObject damageNumberTestGO = null!;
-    Text t = null!;
-    Color c;
-    MeshRenderer mr = null!;
-    TextMesh tm = null!;
+    private Text t = null!;
+    private Color c;
+    private MeshRenderer mr = null!;
+    private TextMesh tm = null!;
 
     public string damVal = null!;
 

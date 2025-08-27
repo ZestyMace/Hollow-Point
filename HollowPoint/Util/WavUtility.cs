@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Text;
+﻿using System.Text;
+using UnityEngine;
 
 /// <summary>
 /// WAV utility for recording and audio playback functions in Unity.
@@ -20,7 +20,7 @@ namespace HollowPoint.Util;
 public class WavUtility
 {
     // Force save as 16-bit .wav
-    const int BlockSize_16Bit = 2;
+    private const int BlockSize_16Bit = 2;
 
     /// <summary>
     /// Load PCM format *.wav audio file (using Unity's Application data path) and convert to AudioClip.
@@ -130,7 +130,7 @@ public class WavUtility
         int i = 0;
         while (i < convertedSize)
         {
-            offset = i * x + headerOffset;
+            offset = (i * x) + headerOffset;
             data[i] = (float)BitConverter.ToInt16(source, offset) / maxValue;
             ++i;
         }
@@ -163,7 +163,7 @@ public class WavUtility
         int i = 0;
         while (i < convertedSize)
         {
-            offset = i * x + headerOffset;
+            offset = (i * x) + headerOffset;
             Buffer.BlockCopy(source, offset, block, 1, x);
             data[i] = (float)BitConverter.ToInt32(block, 0) / maxValue;
             ++i;
@@ -194,7 +194,7 @@ public class WavUtility
         int i = 0;
         while (i < convertedSize)
         {
-            offset = i * x + headerOffset;
+            offset = (i * x) + headerOffset;
             data[i] = (float)BitConverter.ToInt32(source, offset) / maxValue;
             ++i;
         }
@@ -216,7 +216,7 @@ public class WavUtility
     public static byte[] FromAudioClip(AudioClip audioClip, out string filepath, bool saveAsFile = true,
         string dirname = "recordings")
     {
-        MemoryStream stream = new MemoryStream();
+        MemoryStream stream = new();
 
         const int headerSize = 44;
 
@@ -227,7 +227,7 @@ public class WavUtility
         //Debug.AssertFormat (bitDepth == 16, "Only converting 16 bit is currently supported. The audio clip data is {0} bit.", bitDepth);
 
         // total file size = 44 bytes for header format and audioClip.samples * factor due to float to Int16 / sbyte conversion
-        int fileSize = audioClip.samples * BlockSize_16Bit + headerSize; // BlockSize (bitDepth)
+        int fileSize = (audioClip.samples * BlockSize_16Bit) + headerSize; // BlockSize (bitDepth)
 
         // chunk descriptor (riff)
         WriteFileHeader(ref stream, fileSize);
@@ -350,7 +350,7 @@ public class WavUtility
 
     private static byte[] ConvertAudioClipDataToInt16ByteArray(float[] data)
     {
-        MemoryStream dataStream = new MemoryStream();
+        MemoryStream dataStream = new();
 
         int x = sizeof(short);
 

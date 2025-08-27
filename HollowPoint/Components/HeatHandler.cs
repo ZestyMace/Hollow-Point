@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace HollowPoint.Components;
 
@@ -19,7 +19,7 @@ internal sealed class HeatHandler : MonoBehaviour
         StartCoroutine(InitializeHeatMeter());
     }
 
-    IEnumerator InitializeHeatMeter()
+    private IEnumerator InitializeHeatMeter()
     {
         while (HeroController.instance == null || PlayerData.instance == null)
         {

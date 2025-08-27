@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
-using Modding;
-using static HollowPoint.HollowPointEnums;
+﻿using HollowPoint.Util;
 using HutongGames.PlayMaker.Actions;
+using Modding;
+using System.Collections;
+using UnityEngine;
 using Vasi;
-using HollowPoint.Util;
+using static HollowPoint.HollowPointEnums;
 
 
 namespace HollowPoint.Components;
@@ -52,7 +52,7 @@ internal sealed class HollowPointPrefabs : MonoBehaviour
         return go;
     }
 
-    IEnumerator CreateBulletPrefab()
+    private IEnumerator CreateBulletPrefab()
     {
         do
         {
@@ -170,7 +170,7 @@ internal sealed class HollowPointPrefabs : MonoBehaviour
         Log.Info("Initalized BulletObject");
     }
 
-    IEnumerator GetFSMPrefabsAndParticles()
+    private IEnumerator GetFSMPrefabsAndParticles()
     {
         while (HeroController.instance == null) yield return null;
 

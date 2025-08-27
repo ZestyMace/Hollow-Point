@@ -9,7 +9,7 @@ public sealed class HollowPointMod : Mod
 {
     public static HollowPointMod Instance { get; private set; } = null!;
 
-    public HollowPointMod(): base("Hollow Point")
+    public HollowPointMod() : base("Hollow Point")
     {
         Instance = this;
     }

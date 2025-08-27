@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Modding;
-using static HollowPoint.HollowPointEnums;
-using UnityEngine;
-using GlobalEnums;
-using Vasi;
+﻿using GlobalEnums;
 using HollowPoint.Util;
+using System.Collections;
+using UnityEngine;
+using Vasi;
 
 namespace HollowPoint.Components;
 
@@ -19,7 +13,7 @@ public sealed class DamageOverride : MonoBehaviour
     public static System.Random rand = new();
 
     public static bool heroDamageCoroutineActive = false;
-    GameObject healSoundGO = null!;
+    private GameObject healSoundGO = null!;
 
     public void Awake()
     {
@@ -76,7 +70,7 @@ public sealed class DamageOverride : MonoBehaviour
         if (srcName.Contains("Gas"))
         {
             //Explosion damage
-            hitInstance.DamageDealt = 3 + PlayerData.instance.nailSmithUpgrades * 5;
+            hitInstance.DamageDealt = 3 + (PlayerData.instance.nailSmithUpgrades * 5);
             orig(self, hitInstance);
             return;
         }
@@ -97,14 +91,14 @@ public sealed class DamageOverride : MonoBehaviour
         else if (srcName.Contains("Great Slash") || srcName.Contains("Dash Slash"))
         {
             Log.Debug("Player is nail art... ing?");
-            
+
             orig(self, hitInstance);
             return;
         }
         else if (srcName.Contains("Slash"))
         {
             Log.Debug("Player is slashing!");
-            hitInstance.DamageDealt = 3 + PlayerData.instance.nailSmithUpgrades * 3;
+            hitInstance.DamageDealt = 3 + (PlayerData.instance.nailSmithUpgrades * 3);
             orig(self, hitInstance);
             return;
         }
@@ -118,7 +112,7 @@ public sealed class DamageOverride : MonoBehaviour
         Vector3 bulletOriginPosition = hitInstance.Source.GetComponent<BulletBehaviour>().bulletOriginPosition;
         int cardinalDirection = DirectionUtils.GetCardinalDirection(hitInstance.GetActualDirection(self.transform));
 
-        int damage = hpbb.bulletDamage + PlayerData.instance.nailSmithUpgrades * hpbb.bulletDamageScale;
+        int damage = hpbb.bulletDamage + (PlayerData.instance.nailSmithUpgrades * hpbb.bulletDamageScale);
         int soulGainAmt = Stats.SoulGainPerHit();
         //StartCoroutine(SplatterBlood(self.gameObject.transform.position, 1, cardinalDirection * 90));
         if (hpbb.appliesDamageOvertime)

@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using HollowPoint.Util;
+﻿using HollowPoint.Util;
+using System.Collections;
 using UnityEngine;
 
 namespace HollowPoint.Components;
@@ -7,10 +7,10 @@ namespace HollowPoint.Components;
 public sealed class AudioHandler : MonoBehaviour
 {
     public static AudioHandler instance { get; private set; } = null!;
-    bool canPlayKillSound = true;
-    float canPlayKillSoundTimer = 0.02f;
 
-    Dictionary<string, GameObject> sfxGameObjectDictionary = [];
+    private bool canPlayKillSound = true;
+    private float canPlayKillSoundTimer = 0.02f;
+    private Dictionary<string, GameObject> sfxGameObjectDictionary = [];
     public enum HollowPointSoundType
     {
         ShootSFXGO,

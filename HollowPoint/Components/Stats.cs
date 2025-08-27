@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using HollowPoint.Util;
 using Modding;
+using System.Collections;
 using System.Xml;
+using UnityEngine;
 using static HollowPoint.HollowPointEnums;
-using HollowPoint.Util;
 
 
 namespace HollowPoint.Components;
@@ -16,10 +16,10 @@ internal sealed class Stats : MonoBehaviour
     public static event Action<string> adrenalineChargeIcons = null!;
     public static event Action<string> nailArtIcon = null!;
 
-    const float DEFAULT_ATTACK_SPEED = 0.41f;
-    const float DEFAULT_ATTACK_SPEED_CH = 0.25f;
-    const float DEFAULT_ANIMATION_SPEED = 0.35f;
-    const float DEFAULT_ANIMATION_SPEED_CH = 0.28f;
+    private const float DEFAULT_ATTACK_SPEED = 0.41f;
+    private const float DEFAULT_ATTACK_SPEED_CH = 0.25f;
+    private const float DEFAULT_ANIMATION_SPEED = 0.35f;
+    private const float DEFAULT_ANIMATION_SPEED_CH = 0.28f;
 
     //static ShitStack extraWeavers = new ShitStack();
     //TODO: clean unused variables
@@ -41,9 +41,8 @@ internal sealed class Stats : MonoBehaviour
     public int current_minWeaponSpreadFactor = 1;
     public int current_soulGainedPerHit = 0;
     public int current_soulGainedPerKill = 0;
-
-    int current_energyRequirement = 100;
-    float current_energyPenalty = 0.6f;
+    private int current_energyRequirement = 100;
+    private float current_energyPenalty = 0.6f;
 
     public bool canUseNailArts = false;
     public bool canFire = false;
@@ -59,8 +58,8 @@ internal sealed class Stats : MonoBehaviour
     public float passiveSoulTimer = 3f;
     private float recentlyKilledTimer;
     public float fireRateCooldownTimer = 5f;
-    float recentlyTookDamageTimer = 0f;
-    float hiveBloodHealTimer = 0f;
+    private float recentlyTookDamageTimer = 0f;
+    private float hiveBloodHealTimer = 0f;
 
     //Weapon Swapping
     public bool canSwap = true;
@@ -73,15 +72,15 @@ internal sealed class Stats : MonoBehaviour
 
     //Variables for the healing mechanic
     public int adrenalineCharges;
-    int adrenalineEnergy;
-    float adenalineCooldownTimer;
-    float heal_ChargesDecayTimer;
-    bool adrenalineOnCooldown;
+    private int adrenalineEnergy;
+    private float adenalineCooldownTimer;
+    private float heal_ChargesDecayTimer;
+    private bool adrenalineOnCooldown;
 
     //Infusion Stuff
-    GameObject furyParticle = null!;
-    GameObject furyBurst = null!;
-    float infusionTimer = 0;
+    private GameObject furyParticle = null!;
+    private GameObject furyBurst = null!;
+    private float infusionTimer = 0;
     public bool infusionActivated = false;
 
     public Gun currentEquippedGun;
@@ -131,7 +130,7 @@ internal sealed class Stats : MonoBehaviour
         enemyList.RemoveAll(enemy => enemy == null);
     }
 
-    public List<GameObject> enemyList = new List<GameObject>();
+    public List<GameObject> enemyList = [];
 
     private bool Instance_OnEnableEnemyHook(GameObject enemy, bool isAlreadyDead)
     {
@@ -334,11 +333,11 @@ internal sealed class Stats : MonoBehaviour
         return orig;
     }
 
-    void Update()
+    private void Update()
     {
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
 
         if (fireRateCooldownTimer >= 0)
@@ -475,7 +474,7 @@ internal sealed class Stats : MonoBehaviour
      *  2 = same but now the player has 2 charges || consuming heals 1 mask
      *  3 = same but now the player has 3 charge  || consuming heals 2 mask
      */
-    void IncDecAdrenalineCharges(int amount)
+    private void IncDecAdrenalineCharges(int amount)
     {
         //adrenalineCharges += (increase && adrenalineCharges < 3) ? 1 : (!increase)? -1 : 0;
         adrenalineCharges += amount;
@@ -518,7 +517,7 @@ internal sealed class Stats : MonoBehaviour
         recentlyTookDamageTimer = 1f;
 
         int energyLost = 150;
-        int totalPlayerEnergy = adrenalineCharges * 100 + adrenalineEnergy;
+        int totalPlayerEnergy = (adrenalineCharges * 100) + adrenalineEnergy;
 
         if (pd_instance.equippedCharm_8) energyLost -= 75;
         if (pd_instance.equippedCharm_9) energyLost -= 125;
@@ -540,7 +539,7 @@ internal sealed class Stats : MonoBehaviour
         //ConsumeAdrenalineCharges(consumeAmount: -totalAdrenalineToConsume);
     }
 
-    void UpdateBloodRushBuffs(float runspeed, float dashcooldown, int soulusage, float timer)
+    private void UpdateBloodRushBuffs(float runspeed, float dashcooldown, int soulusage, float timer)
     {
         //Default Dash speeds default_dash_cooldown = 0.6f; default_dash_cooldown_charm = 0.4f; default_dash_speed = 20f; default_dash_speed_sharp = 28f; default_dash_time = 0.25f; default_gravity = 0.79f;
         HeroController.instance.WALK_SPEED = runspeed;
@@ -611,7 +610,7 @@ internal sealed class Stats : MonoBehaviour
         recentlyFiredTimer = 1.5f;
     }
 
-    GameObject extraShield = null;
+    private GameObject extraShield = null;
 
     public void ActivateInfusionBuff(bool activate)
     {
@@ -641,7 +640,7 @@ internal sealed class Stats : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         ModHooks.CharmUpdateHook -= CharmUpdate;
         ModHooks.GetPlayerIntHook -= OverrideFocusCost;
