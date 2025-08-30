@@ -30,7 +30,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="$(HKRefs)/*.dll" Private="True" />
+		<Reference Include="$(HKRefs)/Assembly-CSharp.dll" Private="True" />
+		<Reference Include="$(HKRefs)/MMHOOK_Assembly-CSharp.dll" Private="True" />
+		<Reference Include="$(HKRefs)/MonoMod.Utils.dll" Private="True" />
+		<Reference Include="$(HKRefs)/MonoMod.RuntimeDetour.dll" Private="True" />
+		<Reference Include="$(HKRefs)/Mono.Cecil.dll" Private="True" />
+		<Reference Include="$(HKRefs)/PlayMaker.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.AudioModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.CoreModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.ImageConversionModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.ParticleSystemModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.Physics2DModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.PhysicsModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.TextRenderingModule.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.UI.dll" Private="True" />
+		<Reference Include="$(HKRefs)/UnityEngine.UIModule.dll" Private="True" />
 		<Reference Include="$(HKModRefs)/Vasi/Vasi.dll" Private="True" />
 
 		<EmbeddedResource Include="$(MSBuildProjectDirectory)/assets/*" WithCulture="False" />
