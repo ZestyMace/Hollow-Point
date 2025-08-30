@@ -240,7 +240,7 @@ internal sealed class Stats : MonoBehaviour
         if (pd_instance.equippedCharm_6) //Fury of the Fallen
         {
             current_soulGainedPerKill += 10;
-            current_soulRegenSpeed -= 0.10f;
+            current_soulRegenSpeed *= 0.60f; // 40% faster reload speed
             current_energyGainOnHit *= 2;
         }
 
@@ -254,7 +254,7 @@ internal sealed class Stats : MonoBehaviour
         {
             current_soulGainedPerKill += 24;
             current_soulGainedPerHit += 3;
-            current_soulRegenSpeed -= 0.015f;
+            current_soulRegenSpeed *= 0.30f; //60% faster reload speed
             current_heatPerShot += 15;
             current_minWeaponSpreadFactor += 3;
         }
@@ -278,7 +278,7 @@ internal sealed class Stats : MonoBehaviour
 
         if (pd_instance.equippedCharm_27) //Joni
         {
-            current_soulRegenSpeed -= 0.033f;
+            current_soulRegenSpeed *= 0.20f; //80% faster reload speed
         }
 
         //Dash Master
