@@ -1,3 +1,7 @@
+ORIGINAL AUTHOR: TTACO
+
+PREVIOUS MAINTAINER: REDFROG6002
+
 # HOLLOW POINT
 
 **Please check the Issues section if you are having healing issues, thanks.**
@@ -10,6 +14,27 @@ While this mod is not to be taken seriously, It still aims to make a semi-seriou
 
 **AUTHOR'S NOTE: Due to personal reasons like burnout and motivation, I might not be able to fix all the bugs so PLEASE READ THE ISSUES LIST BELOW BEFORE ASKING QUESTIONS ABOUT IT**
 
+________________________________________________________________________________________________________________
+
+## HOW TO BUILD
+
+1. Clone the repository.
+2. Create a text file called `LocalProperties.props` in the root of the cloned repository.
+3. Create a `Project` node with `PropertyGroup` child and set `HKRefs` to the directory containing the **modded** dll files.
+4. Set `HKModRefs` to the directory containing your mods, located in your managed folder.
+
+After this, you should be able to compile the mod.
+An example `LocalProperties.props` would look something like:
+```xml
+<Project>
+    <PropertyGroup>
+        <HKRefs>C:/Program Files (x86)/Steam/steamapps/common/Hollow Knight/hollow_knight_Data/Managed</HKRefs>
+        <HKModRefs>C:/Program Files (x86)/Steam/steamapps/common/Hollow Knight/hollow_knight_Data/Managed/Mods</HKModRefs>
+    </PropertyGroup>
+</Project>
+```
+
+Many thanks to Ruttie for modernizing the code so I can actually work on it.
 ________________________________________________________________________________________________________________
 
 ## FEATURES:
