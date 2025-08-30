@@ -59,11 +59,9 @@ charms that were not changed much were either buffed, or found themselves being 
 - No seriously who cares about the lore.
 ________________________________________________________________________________________________________________
 ## REQUIREMENTS:
-NOTE: These can all be easily installed using the Official HK Discord's Modding Installer
 - A legit copy of Hollow Knight on either GOG or Steam
-- Make sure the Modding API correct installs itself when running the installer
-- Install and Enable "ModCommon"
-- Install QOL (Quality of Life Mod) by 56 (shoutouts)
+- Install Lumafly (enables modding)
+- Install and Enable "Vasi"
 - Install and Enable Hollow Point
 
 ## CONTROLS:
@@ -115,19 +113,19 @@ These classes changes the abilities that fits their appropriate guns.
 **Up Spell** - Modifies the scream attack (Howling Wraiths/Abyss Shriek), used for offensive means.
 
 **BREACHER:** Focuses on close range combat, using high damaging but slow charging weapons.
-Weapons: SMG and Shotgun.
+Weapons: SMG and Shotgun/Trench Gun.
 Passive: Increases SOUL generation.
 Down Spell: Eject several shrapnel that can tear apart close enemies.
 Up Spell: Loads you up with terrain piercing ammunition, automatically firing and shooting at nearby enemies that gets close.
 
 **SABOTEUR** Uses a balanced approach to combat, carrying gas abilities that helps with prolonged fights.
-Weapons: Rifle (Default Gun), Carbine and Light Machine Gun.
+Weapons: Assault Rifle (Default Gun), Suppressed Carbine and Light Machine Gun.
 Passive: Improve the chemical components of your gun, slightly increasing your bullet's velocity and damage.
 Down Spell: Release a gas pulse useful for enemies that get too close.
 Up Spell: Call in a storm of sulphur, scattering the entire screen with dung bombs.
 
 **OBSERVER:** Uses hard hitting long range weapons, together with powerful airstrikes.
-Weapons: Designated Marksman's Rifle and Sniper Rifle.
+Weapons: Designated Marksman's Rifle and Hunting Rifle.
 Passive: Slightly increases firerate.
 Down Spell: Call in several small yield exploding projectiles on your location.
 Up Spell: Call in a slow sweeping air burst barrage that slowly walks forward to the area the knight is facing. Can harm the player.
