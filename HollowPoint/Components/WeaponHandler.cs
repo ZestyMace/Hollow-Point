@@ -289,7 +289,7 @@ public sealed class WeaponSwapAndStatHandler : MonoBehaviour
             soulCostPerShot = 19,
             soulGainOnHit = 0,
             soulGainOnKill = 40,
-            soulRegenSpeed = 0.040f,
+            soulRegenSpeed = 0.045f,
         });
 
         weaponModifierDictionary.Add(WeaponModifierName.CARBINE, new Gun

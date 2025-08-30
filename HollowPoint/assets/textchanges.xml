@@ -1,174 +1,174 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TextChanges>
-	
-  <Text name="CHARM_NAME_3">Breacher's Badge</Text>
-  <Text name="CHARM_DESC_3">A charm that radiates SOUL, given as a gratitude by the Grubs.$The SOUL it provides infuses you with power, allowing you to perform BREACHER abilities instead.</Text>
-  
-  <Text name="CHARM_NAME_5">Blast Shell</Text>
-  <Text name="CHARM_DESC_5">Creates a hard shell capable of protecting the bearer from taking damage while focusing. The shell is not indestructible, and will shatter with enough punishment.$Passively gives the bearer immunity to every explosive damage they receive.</Text>
-  
-  <Text name="CHARM_NAME_6">Fusilier's Fury</Text>
-  <Text name="CHARM_DESC_6">Imbues the bearer with the fury and heroism of those who fell into battle.$You now do increased SOUL regeneration, and gain more upon hitting and killing opponents, but any damage you receive is doubled.</Text>
-  
-  <Text name="CHARM_NAME_7">Quick Charge</Text>
-  <Text name="CHARM_DESC_7">A charm releasing focal energy, aids the bearer in quickly charging their ADRENALINE meter.</Text>
-  
-  <Text name="CHARM_NAME_8">Lifeblood Essence</Text>
-  <Text name="CHARM_DESC_8">Contains a living core that seeps precious lifeblood.$Putting survival as the priority, allows the bearer to apply a protective lifeblood coating to themselves and moderately reduces the ADRENALINE lost upon getting injured.</Text>
-  
-  <Text name="CHARM_NAME_9">Lifeblood Crest</Text>
-  <Text name="CHARM_DESC_9">Contains a living core that bleeds precious lifeblood.$Power's you further granting a stronger protective lifeblood shell and greatly decreases ADRENALINE lost upon getting injured.</Text>
-  
-  <Text name="CHARM_NAME_10">Defender's Crest</Text>
-  <Text name="CHARM_DESC_10">Carried by the old Knight of Dung.$Makes the bearer release a toxic odor, useful for warding off close enemies when wielding a firearm.</Text>
-  
-  <Text name="CHARM_NAME_11">Fluketrooper's Fire</Text>
-  <Text name="CHARM_DESC_11">[Firearm Conversion Kit] (BREACHER)$Converts your rifle into a semi auto marksman's rifle, allowing long range engagements without sacrificing too much of its firerate.$Only one kit may be equipped at a given time.</Text>
 
-  <Text name="CHARM_NAME_12">Thorns of Agony</Text>
-  <Text name="CHARM_DESC_12">Senses the pain of its bearer and lashes out at the world around them. When taking damage, sprout thorny vines that damage nearby foes. Additionally ejects harmful thorns when gaining ADRENALINE.</Text>
+	<Text name="CHARM_NAME_3">Breacher's Badge</Text>
+	<Text name="CHARM_DESC_3">A charm that radiates SOUL, given as a gratitude by the Grubs.$The SOUL it provides infuses you with power, allowing you to perform BREACHER abilities instead.</Text>
 
-  <Text name="CHARM_NAME_13">Marksman's Pride</Text>
-  <Text name="CHARM_DESC_13">[Firearm Conversion Kit] (OBSERVER)$Equip the heavy hitting marksman rifle capable of quickly delivering accurate lethal damage at a long range.$Only one kit may be equipped at a given time.</Text>
+	<Text name="CHARM_NAME_5">Blast Shell</Text>
+	<Text name="CHARM_DESC_5">Creates a hard shell capable of protecting the bearer from taking damage while focusing. The shell is not indestructible, and will shatter with enough punishment.$Passively gives the bearer immunity to every explosive damage they receive.</Text>
 
-  <Text name="CHARM_NAME_14">Observer's Sights</Text>
-  <Text name="CHARM_DESC_14">Improves the bearer's abilty to stay steady when attacking with a nail.$Simply holding this charm imbues you with potent accuracy, allowing you to use OBSERVER skills instead..</Text>
-  
-  <Text name="CHARM_NAME_15">Ballistic Burster</Text>
-  <Text name="CHARM_DESC_15">[Firearm Conversion Kit] (SABOTEUR)$Converts your firearm into a medium powered suppressed carbine, allowing you to inflict high damage against foes at a shorter range.$Only one kit may be equipped at a given time.</Text>
-  
-  <Text name="CHARM_NAME_16">Shaded Shadow</Text>
-  <Text name="CHARM_DESC_16">Contains a forbidden spell that allows the bearer to weaponize their shadows, damaging foes when shade dashing through them.$Decreases Shade Dash cooldown at max ADRENALINE.</Text>
-    
-  <Text name="CHARM_NAME_17">Saboteur's Seal</Text>
-  <Text name="CHARM_DESC_17">A charm that releases spores it comes in contact with SOUL.$The noxious aura of it allows you to apply the abilities used by a SABOTEUR instead.</Text> 
-    
-  <Text name="CHARM_NAME_18">Lacerating Longarm</Text>
-  <Text name="CHARM_DESC_18">[Firearm Conversion Kit] (OBSERVER)$Converts your firearm into a highly accurate, heavy hitting hunting rifle that can pierce through multiple enemies, but suffers from its slow firing speed.$Only one kit may be equipped at a given time.</Text>
-  
-  <Text name="CHARM_NAME_19">Soul Overdrive</Text>
-  <Text name="CHARM_DESC_19">This charm can be applied as a driver to greatly boost the firearm's fire rate$But overdriving comes at the cost of increasing the firearm's HEAT generation, making it less accurate when fired too long.</Text>
-    
-  <Text name="CHARM_NAME_20">Soul Swiftshot</Text>
-  <Text name="CHARM_DESC_20">[Firearm Conversion Kit] (BREACHER)$This compact assault submachine gun can tear apart enemies at close range with its 3 burst firerate, but doesn't pack too much punch and range.$Only one kit may be equipped at a given time.</Text>
-  
-  <Text name="CHARM_NAME_21">Soul Overload MK.II</Text>
-  <Text name="CHARM_DESC_21">Forgotten shaman artifact, used to draw SOUL from still-living creatures.$An advance version of the overdriver, this charm increases the firearm's SOUL efficiency, greatly increasing SOUL generation and SOUL on upon killing or wounding foes$The accuracy however greatly suffers in return.</Text>
-  
-  <Text name="CHARM_DESC_23">Increases the health of the bearer, allowing them to receive more damage.$Survival is a priority for several after all, and this charm allows the bearer to heal faster at maximum ADRENALINE.</Text>
-  <Text name="CHARM_DESC_23_G">Increases the health of the bearer, allowing them to receive more damage.$Survival is a priority for several after all, and this charm allows the bearer to heal faster at maximum ADRENALINE.$This charm is now indestructible.</Text>
+	<Text name="CHARM_NAME_6">Fusilier's Fury</Text>
+	<Text name="CHARM_DESC_6">Imbues the bearer with the fury and heroism of those who fell into battle.$You now do 40% increased SOUL regeneration, and gain more upon hitting and killing opponents, but any damage you receive is doubled.</Text>
 
-  <Text name="CHARM_NAME_24">Fragile Assassin's Mark</Text>
-  <Text name="CHARM_NAME_24_G">Unbreakable Assassin's Mark</Text>
-  <Text name="CHARM_DESC_24">A charm hailing from assassins who only shoots when it's a guaranteed kill, this charm prevents SOUL regeneration and reduces the SOUL gained from damaging enemies, but doubles the SOUL gained during kills.$Increases the amount of geo gained from fallen enemies.</Text>
-  <Text name="CHARM_DESC_24_G">A charm hailing from assassins who only shoots when it's a guaranteed kill, this charm prevents SOUL regeneration and reduces the SOUL gained from damaging enemies, but doubles the SOUL gained during kills.$Increases the amount of geo gained from fallen enemies.$This charm is now indestructible.</Text>
-  
-  <Text name="CHARM_NAME_25">Fragile Rounds</Text>
-  <Text name="CHARM_NAME_25_G">Unbreakable Rounds</Text>
-  <Text name="CHARM_DESC_25">Replaces your ammunition with high powered tungsten rounds, allowing it to pierce through enemies and moderately increase its damage against them.</Text>
-  <Text name="CHARM_DESC_25_G">Replaces your ammunition with high powered tungsten rounds, allowing it to pierce through enemies and moderately increase its damage against them.$This charm is now indestructible</Text>
-  
-  <Text name="CHARM_NAME_26">Daggermaster's Glory</Text>
-  <Text name="CHARM_DESC_26">Contains the passion, skill and regrets of a Nailmaster.$Applying the Nailmasters teaching further, halves the cooldown rate for all dagger abilities.</Text>
-  
-  <Text name="CHARM_NAME_27">Joni's Sacrifice</Text>
-  <Text name="CHARM_DESC_27">Charm blessed by Joni, the kindly heretic.$Completely replaces the bearer's shell with lifeblood, and disregards all SOUL to the firearm, preventing healing but greatly increasing passive SOUL generation. Also prevent's ADRENALINE lost upon getting hit.</Text>
-  
-  <Text name="CHARM_NAME_28">Shape of Gunn</Text>
-  <Text name="CHARM_DESC_28">Charm that gives you the secrets of long range power, replacing bullets with SLUG rounds capable of being fired at high velocities and increasing accuracy.</Text>
-  
-  <Text name="CHARM_NAME_29">Hive Regeneration</Text>
-  <Text name="CHARM_DESC_29">Precious golden nectar hardened from the Hive. Allows the bearer to passively heal the last damage taken.$Slows down ADRENALINE gain, but passively heals the bearer's shell to full health at maximum ADRENALINE.</Text>
-  
-  <Text name="CHARM_NAME_31">Dash Master</Text>
-  <Text name="CHARM_DESC_31">Swift and speedy like the Dashmaster, improves the bearer's movement agility.$Decreases dash cooldown and gives more lift when firing your weapons below.</Text>
-  
-  <Text name="CHARM_NAME_32">Gunner's Gallantry</Text>
-  <Text name="CHARM_DESC_32">[Firearm Conversion Kit] (SABOTEUR)$This mobile support weapon fires SOUL with a high fire rate at an extremely low SOUL consumption, but suffers from long recharges.$Only one kit may be equipped at a given time.</Text>
-  
-  <Text name="CHARM_NAME_33">Soul Optimizer</Text>
-  <Text name="CHARM_DESC_33">Shows the reflection of the Soul Sanctum's desire over SOUL.$Reduces the SOUL to fire, effectively increasing ammunition count.</Text>
-  
-  <Text name="CHARM_NAME_34">Deep Focus</Text>
-  <Text name="CHARM_DESC_34">Naturally formed within a crystal over a long period. Draws in SOUL from the surrounding air.$Slows down the speed it takes to heal when at full ADRENALINE, but allows the bearer to heal twice as much.</Text>
-  
-  <Text name="CHARM_NAME_35">Grubberfly's Light</Text>
-  <Text name="CHARM_DESC_35">Contains the gratitude of grubs who will move to the next stage of their lives.$Imbues the bearer with holy and flaming aura, modifying the bullets to use incendiary ammunition capable of doing damage overtime at maximum ADRENALINE.</Text>
-  
-  <Text name="CHARM_NAME_37">Sprintmaster</Text>
-  <Text name="CHARM_DESC_37">Bears the likeness of a mysterious bug known only as 'The Sprintmaster'.$Maximum ADRENALINE further increases movement speed.</Text>
+	<Text name="CHARM_NAME_7">Quick Charge</Text>
+	<Text name="CHARM_DESC_7">A charm releasing focal energy, aids the bearer in quickly charging their ADRENALINE meter.</Text>
 
-  <Text name="SHOP_DESC_NORECOIL">I love the simple design on this little fellow! Very classy! It's made out of a nice, solid, heavy material too.$$Sharpshooters like you, would love something like this.</Text>
-  <Text name="SHOP_DESC_LONGNAIL">I have something that can help you reach a bit more farther for that "firearm" of yours.$$Antique pattern design but still reliable ho ho ho!</Text>
-  <Text name="SHOP_DESC_ENEMYRECOILUP">Maybe you prefer something closer, faster and hard hitting right? With this charm equipped, you can be far more deadlier up close!</Text>
-  <Text name="SHOP_DESC_SPELLDMGUP">Need to fire faster? Don't care about this so called "accuracy"? This charm is the perfect fit for you!</Text>
-  <Text name="SHOP_DESC_QUICKFOCUS">Always in the thick of danger? This shiny thing will make your little adrenaline problem a bit easier!</Text>
-  <Text name="SHOP_DESC_BLUEHEALTHSMALL">See that bright blue liquid "lifeblood"? It's considered taboo, but I heard not only does it make you healthier, but helps with exhaustion when getting hit.</Text>
-  
-  <Text name="INV_NAME_ART_DASH">Fan of Knives</Text>
-  <Text name="INV_DESC_ART_DASH">While Sheo's technique relies on performing a powerful slash, you have re purposed it to instead throw several short range daggers.</Text>
-  <Text name="INV_NAME_ART_UPPER">Precision Cut</Text>
-  <Text name="INV_DESC_ART_UPPER">A technique used by Oro to cut enemies in a precise motion, you instead apply the technique to throw a single, piercing and lacerating dagger.</Text>
-  <Text name="INV_NAME_ART_CYCLONE">Dagger Fall</Text>
-  <Text name="INV_DESC_ART_CYCLONE">Mato's technique allows him to spin and strike several enemies, you manage to add in throwing projectiles to the mix, allowing to fling a dagger at every enemy in an area.</Text>
-  
-  <Text name="MATO_TAUGHT">"Your form... exquisite! You even were able to adapt it with the use of knives.#I hope you don't think me too forward when I say that I consider you to be my child. Yes! When I saw you perform my Nail Art I felt a bond between us suddenly flash into existence!#You honour me beyond words, my pupil...#Thank you.</Text>
-  <Text name="ORO_TAUGHT">Hmph. I must say, you are an excellent pupil.#Though I was confused when you started throwing daggers out of nowhere, you do your own thing I guess.#Your skill with the nail and dagger, and your thirst to become stronger... you remind me of my brothers.#I have taught you all I can. Go back into the world, traveller, and leave me to my solitude."</Text>
-  <Text name="SHEO_TAUGHT">So! My work, does it move you?#The wielding of a nail, the wielding of a brush... throwing a knife???... these things are not so different.#We cut, or throw, ourselves into the world so that we can peer deeper inside.#For now though, I have nothing more to teach you. Your path forwards... only you can see it. Good luck.#And try not to injure anyone when you throw those things."</Text>
-  
-  <Text name="PROMPT_FRAGILE_GREED">Give Fragile Assassin's Mark charm?</Text>
-  
-  <Text name="PROMPT_FOCUS_EXPLAINER1A">Gain ADRENALINE by attacking enemies</Text>
-  <Text name="PROMPT_FOCUS_EXPLAINER1B">Once ADRENALINE is full</Text>
-  <Text name="PROMPT_FOCUS_EXPLAINER2">To quick reload and convert ADRENALINE to SOUL.</Text>
-  <Text name="INV_DESC_SPELL_FOCUS">Fill your ADRENALINE bar to its maximum capacity to enable shell repairing.$$Continue doing damage against enemies to heal lost health.</Text>
+	<Text name="CHARM_NAME_8">Lifeblood Essence</Text>
+	<Text name="CHARM_DESC_8">Contains a living core that seeps precious lifeblood.$Putting survival as the priority, allows the bearer to apply a protective lifeblood coating to themselves and moderately reduces the ADRENALINE lost upon getting injured.</Text>
 
-  <Text name="PROMPT_FIREBALL">...</Text>
-  
-  <Text name="NAILSMITH_MEET_3">After a Nailsmith are you? Well you've found one. I'm not much for talk, but if its a nail that needs repair then you've come to the right bug.#Hmm you seem to be carrying one of those things, I'm not too experienced repairing them but I can give it a try.#Your own nail is in quite a sorry state. It's obviously not one of mine. Still, anything can be refined with enough effort and skill, even with a broken blade or a gun.</Text>
-  <Text name="NAILSMITH_OFFER_ORE">I see you have some Pale Ore. A rare, fine metal, that. Give me the ore and some Geo for my efforts, and I'll reforge your nail and your gun to make it stronger.</Text>
-  <Text name="NAILSMITH_COMPLETE_1">There we go. The reforging is complete.#I've honed your nail's edge and your gun's receiver. You'll find it much stronger than it used to be.#Head out there and test its strength against your foes.</Text>
-  <Text name="NAILSMITH_COMPLETE_2">There we go. The reforging is complete.#I've added a channel to your nail and refitted the spring on your gun. It should cut and shoot much more efficiently. You'll find it stronger than it used to be.#Head out there and test your weapons against your foes.</Text>
-  <Text name="NAILSMITH_COMPLETE_3">Here we are. The reforging is complete.#I've modified the nail to spiral form and replaced the barrel. A very tricky task it was. You'll find it stronger than ever before.#Off you go now. Cut and shoot your way forward.</Text>
-  <Text name="NAILSMITH_COMPLETE_4">It's done. The reforging is done.#Your nail and gun is much stronger than it used to be. As strong as it could ever be.#In only your weapons have I seen such potential. Finally, I behold the majesty of a Pure Nail, and the Avtomat. #To think this moment has come upon me so soon...#...I... I must step outside a moment...</Text>
-  <Text name="NAILSMITH_NEED_ORE1">If you bring me a piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
-  <Text name="NAILSMITH_NEED_ORE2">If you bring me two piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
-  <Text name="NAILSMITH_NEED_ORE3">If you bring me three piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
-  
-  <Text name="HORNET_OUTSKIRTS_DEFEAT">...So strong...#Or maybe I shouldn't have brought a needle to a gun fight, but regardless.#You could do it, if you had the will or a 7.62mm assault rifle.#But could you raise your gun once knowing its tragic conception? And knowing yourself?...#Then do it, Ghost of Hallownest! Head onward. Burn that mark upon your shell and claim yourself as King.</Text>
-  <Text name="HORNET_OUTSKIRTS_DEFEAT"></Text>
-  
-  <Text name="INV_NAME_SPELL_FIREBALL1">ADRENALINE POTENCY</Text>
-  <Text name="INV_DESC_SPELL_FIREBALL1">You can swap directional fire modes.$You have learned the control of ADRENALINE.$Passively, your ADRENALINE generation has been moderately improved.</Text> 
-  <Text name="INV_NAME_SPELL_FIREBALL2">ADRENALINE MASTERY</Text>
-  <Text name="INV_DESC_SPELL_FIREBALL2">You can swap directional fire modes.$You have mastered the control of ADRENALINE.$Passively, your ADRENALINE generation has been greatly improved.</Text>
+	<Text name="CHARM_NAME_9">Lifeblood Crest</Text>
+	<Text name="CHARM_DESC_9">Contains a living core that bleeds precious lifeblood.$Power's you further granting a stronger protective lifeblood shell and greatly decreases ADRENALINE lost upon getting injured.</Text>
 
-  <Text name="INV_NAME_SPELL_QUAKE1">EVASIVE ACTION</Text>
-  <Text name="INV_DESC_SPELL_QUAKE1">Slam down and perform your defensive ability.$BREACHERS: Soul Crash$SABOTEUR: Spore Pulse$OBSERVER: Danger Close</Text>
-  <Text name="INV_NAME_SPELL_QUAKE2">DEFENSIVE MANEUVER</Text>
-  <Text name="INV_DESC_SPELL_QUAKE2">Slam down and perform your defensive ability.$BREACHERS: Soul Crash$SABOTEUR: Spore Pulse$OBSERVER: Danger Close</Text>
-  
-  <Text name="INV_NAME_SPELL_SCREAM1">ADRENAL OVERCHARGE</Text>
-  <Text name="INV_DESC_SPELL_SCREAM1">Scream and call down your most destructive ability.$BREACHERS: Shrapnel Targeting$SABOTEUR: Sulphur Burst$OBSERVER: Air Barrage</Text>
-  <Text name="INV_NAME_SPELL_SCREAM2">ADRENAL OVERLOAD</Text>
-  <Text name="INV_DESC_SPELL_SCREAM2">Scream and call down your most destructive ability.$BREACHERS: Shrapnel Targeting$SABOTEUR: Sulphur Burst$OBSERVER: Air Barrage</Text>
+	<Text name="CHARM_NAME_10">Defender's Crest</Text>
+	<Text name="CHARM_DESC_10">Carried by the old Knight of Dung.$Makes the bearer release a toxic odor, useful for warding off close enemies when wielding a firearm.</Text>
 
-  <Text name="GET_ITEM_INTRO_2">Acquired</Text>
+	<Text name="CHARM_NAME_11">Fluketrooper's Fire</Text>
+	<Text name="CHARM_DESC_11">[Conversion Kit - BREACHER]$[Trench Gun]$Equip this pump-action shotgun to obliterate your foes at close range. The shotgun has a wide spread and low accuracy, making it less suitable for longer ranges.$Only one kit may be equipped at a given time.</Text>
 
-  <Text name="GET_FIREBALL_1">Passively increases ADRENALINE build up by a moderate amount.</Text>
-  <Text name="GET_FIREBALL_2">Use ADRENALINE to unleash abilities and to empower yourself. Does not need to be activated</Text>
-  <Text name="GET_FIREBALL2_1">Passively increases ADRENALINE build up by a great amount.</Text>
-  <Text name="GET_FIREBALL2_2">Use ADRENALINE to unleash abilities and to empower yourself. Does not need to be activated</Text>
-  
-  <Text name="GET_QUAKE_1">Slam the ground, consuming adrenaline and unleashing your defensive ability.</Text>
-  <Text name="GET_QUAKE_2">Defensive abilities differs on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
-  <Text name="GET_QUAKE2_1">Slam the ground, consuming adrenaline and unleashing your defensive ability.</Text>
-  <Text name="GET_QUAKE2_2">Defensive abilities differs on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
-  
-  <Text name="GET_SCREAM_1">To unleash your most powerful ability.</Text>
-  <Text name="GET_SCREAM_2">These abilities differ on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
-  <Text name="GET_SCREAM2_1">to activate your SOUL shard.</Text>
-  <Text name="GET_SCREAM2_2">These abilities differ on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
-  
-  <Text name="GAME_TITLE">HOLLOW POINT</Text>
+	<Text name="CHARM_NAME_12">Thorns of Agony</Text>
+	<Text name="CHARM_DESC_12">Senses the pain of its bearer and lashes out at the world around them. When taking damage, sprout thorny vines that damage nearby foes. Additionally ejects harmful thorns when gaining ADRENALINE.</Text>
+
+	<Text name="CHARM_NAME_13">Marksman's Pride</Text>
+	<Text name="CHARM_DESC_13">[Conversion Kit - OBSERVER]$[Marksman Rifle] $Equip the heavy hitting marksman rifle capable of quickly delivering accurate lethal damage at a long range.$Only one kit may be equipped at a given time.</Text>
+
+	<Text name="CHARM_NAME_14">Observer's Sights</Text>
+	<Text name="CHARM_DESC_14">Improves the bearer's abilty to stay steady when attacking with a nail.$Simply holding this charm imbues you with potent accuracy, allowing you to use OBSERVER skills instead..</Text>
+
+	<Text name="CHARM_NAME_15">Ballistic Burster</Text>
+	<Text name="CHARM_DESC_15">[Conversion Kit - SABOTEUR]$[Suppressed Carbine]$Converts your firearm into a medium powered suppressed carbine, allowing you to inflict high damage against foes at a shorter range. Very high recoil.$Only one kit may be equipped at a given time.</Text>
+
+	<Text name="CHARM_NAME_16">Shaded Shadow</Text>
+	<Text name="CHARM_DESC_16">Contains a forbidden spell that allows the bearer to weaponize their shadows, damaging foes when shade dashing through them.$Decreases Shade Dash cooldown at max ADRENALINE.</Text>
+
+	<Text name="CHARM_NAME_17">Saboteur's Seal</Text>
+	<Text name="CHARM_DESC_17">A charm that releases spores it comes in contact with SOUL.$The noxious aura of it allows you to apply the abilities used by a SABOTEUR instead.</Text>
+
+	<Text name="CHARM_NAME_18">Lacerating Longarm</Text>
+	<Text name="CHARM_DESC_18">[Conversion Kit - OBSERVER]$[Hunting Rifle]$Converts your firearm into a highly accurate, large caliber hunting rifle that can pierce through multiple enemies, but suffers from its slow firing speed and long reload time.$Only one kit may be equipped at a given time.</Text>
+
+	<Text name="CHARM_NAME_19">Soul Overdrive</Text>
+	<Text name="CHARM_DESC_19">This charm can be applied as a driver to greatly boost the firearm's fire rate$But overdriving comes at the cost of increasing the firearm's HEAT generation, making it less accurate when fired too long.</Text>
+
+	<Text name="CHARM_NAME_20">Soul Swiftshot</Text>
+	<Text name="CHARM_DESC_20">[Conversion Kit - BREACHER]$[Submachine Gun]$This compact assault submachine gun can tear apart enemies at close range with its 3 burst firerate, but doesn't pack too much punch and range.$Only one kit may be equipped at a given time.</Text>
+
+	<Text name="CHARM_NAME_21">Soul Overdrive MK.II</Text>
+	<Text name="CHARM_DESC_21">Forgotten shaman artifact, used to draw SOUL from still-living creatures.$A modified version of the overdriver, this charm increases the firearm's SOUL efficiency, increasing passive SOUL generation by 60%, as well as increasing SOUL gained upon killing or wounding foes$The accuracy however greatly suffers in return.</Text>
+
+	<Text name="CHARM_DESC_23">Increases the health of the bearer, allowing them to receive more damage.$Survival is a priority for several after all, and this charm allows the bearer to heal faster at maximum ADRENALINE.</Text>
+	<Text name="CHARM_DESC_23_G">Increases the health of the bearer, allowing them to receive more damage.$Survival is a priority for several after all, and this charm allows the bearer to heal faster at maximum ADRENALINE.$This charm is now indestructible.</Text>
+
+	<Text name="CHARM_NAME_24">Fragile Assassin's Mark</Text>
+	<Text name="CHARM_NAME_24_G">Unbreakable Assassin's Mark</Text>
+	<Text name="CHARM_DESC_24">A charm hailing from assassins who only shoots when it's a guaranteed kill, this charm prevents SOUL regeneration and reduces the SOUL gained from damaging enemies, but doubles the SOUL gained during kills.$Increases the amount of geo gained from fallen enemies.</Text>
+	<Text name="CHARM_DESC_24_G">A charm hailing from assassins who only shoots when it's a guaranteed kill, this charm prevents SOUL regeneration and reduces the SOUL gained from damaging enemies, but doubles the SOUL gained during kills.$Increases the amount of geo gained from fallen enemies.$This charm is now indestructible.</Text>
+
+	<Text name="CHARM_NAME_25">Fragile Rounds</Text>
+	<Text name="CHARM_NAME_25_G">Unbreakable Rounds</Text>
+	<Text name="CHARM_DESC_25">Replaces your ammunition with high powered tungsten rounds, allowing it to pierce through enemies and moderately increase its damage against them.</Text>
+	<Text name="CHARM_DESC_25_G">Replaces your ammunition with high powered tungsten rounds, allowing it to pierce through enemies and moderately increase its damage against them.$This charm is now indestructible</Text>
+
+	<Text name="CHARM_NAME_26">Daggermaster's Glory</Text>
+	<Text name="CHARM_DESC_26">Contains the passion, skill and regrets of a Nailmaster.$Applying the Nailmasters teaching further, halves the cooldown rate for all dagger abilities.</Text>
+
+	<Text name="CHARM_NAME_27">Joni's Sacrifice</Text>
+	<Text name="CHARM_DESC_27">Charm blessed by Joni, the kindly heretic.$Completely replaces the bearer's shell with lifeblood, and disregards all SOUL to the firearm, preventing healing but increasing passive SOUL generation by 80%. Also prevent's ADRENALINE lost upon getting hit.</Text>
+
+	<Text name="CHARM_NAME_28">Shape of Gunn</Text>
+	<Text name="CHARM_DESC_28">Charm that gives you the secrets of long range power, replacing bullets with SLUG rounds capable of being fired at high velocities and increasing accuracy.</Text>
+
+	<Text name="CHARM_NAME_29">Hive Regeneration</Text>
+	<Text name="CHARM_DESC_29">Precious golden nectar hardened from the Hive. Allows the bearer to passively heal the last damage taken.$Slows down ADRENALINE gain, but passively heals the bearer's shell to full health at maximum ADRENALINE.</Text>
+
+	<Text name="CHARM_NAME_31">Dash Master</Text>
+	<Text name="CHARM_DESC_31">Swift and speedy like the Dashmaster, improves the bearer's movement agility.$Decreases dash cooldown and gives more lift when firing your weapons below.</Text>
+
+	<Text name="CHARM_NAME_32">Gunner's Gallantry</Text>
+	<Text name="CHARM_DESC_32">[Conversion Kit - SABOTEUR]$[Light Machine Gun]$This mobile support weapon fires SOUL with a high fire rate at an extremely low SOUL consumption, but suffers from long recharges.$Only one kit may be equipped at a given time.</Text>
+
+	<Text name="CHARM_NAME_33">Soul Optimizer</Text>
+	<Text name="CHARM_DESC_33">Shows the reflection of the Soul Sanctum's desire over SOUL.$Reduces the SOUL to fire, effectively increasing ammunition count.</Text>
+
+	<Text name="CHARM_NAME_34">Deep Focus</Text>
+	<Text name="CHARM_DESC_34">Naturally formed within a crystal over a long period. Draws in SOUL from the surrounding air.$Slows down the speed it takes to heal when at full ADRENALINE, but allows the bearer to heal twice as much.</Text>
+
+	<Text name="CHARM_NAME_35">Grubberfly's Light</Text>
+	<Text name="CHARM_DESC_35">Contains the gratitude of grubs who will move to the next stage of their lives.$Imbues the bearer with holy and flaming aura, modifying the bullets to use incendiary ammunition capable of doing damage overtime at maximum ADRENALINE.</Text>
+
+	<Text name="CHARM_NAME_37">Sprintmaster</Text>
+	<Text name="CHARM_DESC_37">Bears the likeness of a mysterious bug known only as 'The Sprintmaster'.$Maximum ADRENALINE further increases movement speed.</Text>
+
+	<Text name="SHOP_DESC_NORECOIL">I love the simple design on this little fellow! Very classy! It's made out of a nice, solid, heavy material too.$$Sharpshooters like you, would love something like this.</Text>
+	<Text name="SHOP_DESC_LONGNAIL">I have something that can help you reach a bit more farther for that "firearm" of yours.$$Antique pattern design but still reliable ho ho ho!</Text>
+	<Text name="SHOP_DESC_ENEMYRECOILUP">Maybe you prefer something closer, faster and hard hitting right? With this charm equipped, you can be far more deadlier up close!</Text>
+	<Text name="SHOP_DESC_SPELLDMGUP">Need to fire faster? Don't care about this so called "accuracy"? This charm is the perfect fit for you!</Text>
+	<Text name="SHOP_DESC_QUICKFOCUS">Always in the thick of danger? This shiny thing will make your little adrenaline problem a bit easier!</Text>
+	<Text name="SHOP_DESC_BLUEHEALTHSMALL">See that bright blue liquid "lifeblood"? It's considered taboo, but I heard not only does it make you healthier, but helps with exhaustion when getting hit.</Text>
+
+	<Text name="INV_NAME_ART_DASH">Fan of Knives</Text>
+	<Text name="INV_DESC_ART_DASH">While Sheo's technique relies on performing a powerful slash, you have re purposed it to instead throw several short range daggers.</Text>
+	<Text name="INV_NAME_ART_UPPER">Precision Cut</Text>
+	<Text name="INV_DESC_ART_UPPER">A technique used by Oro to cut enemies in a precise motion, you instead apply the technique to throw a single, piercing and lacerating dagger.</Text>
+	<Text name="INV_NAME_ART_CYCLONE">Dagger Fall</Text>
+	<Text name="INV_DESC_ART_CYCLONE">Mato's technique allows him to spin and strike several enemies, you manage to add in throwing projectiles to the mix, allowing to fling a dagger at every enemy in an area.</Text>
+
+	<Text name="MATO_TAUGHT">"Your form... exquisite! You even were able to adapt it with the use of knives.#I hope you don't think me too forward when I say that I consider you to be my child. Yes! When I saw you perform my Nail Art I felt a bond between us suddenly flash into existence!#You honour me beyond words, my pupil...#Thank you.</Text>
+	<Text name="ORO_TAUGHT">Hmph. I must say, you are an excellent pupil.#Though I was confused when you started throwing daggers out of nowhere, you do your own thing I guess.#Your skill with the nail and dagger, and your thirst to become stronger... you remind me of my brothers.#I have taught you all I can. Go back into the world, traveller, and leave me to my solitude."</Text>
+	<Text name="SHEO_TAUGHT">So! My work, does it move you?#The wielding of a nail, the wielding of a brush... throwing a knife???... these things are not so different.#We cut, or throw, ourselves into the world so that we can peer deeper inside.#For now though, I have nothing more to teach you. Your path forwards... only you can see it. Good luck.#And try not to injure anyone when you throw those things."</Text>
+
+	<Text name="PROMPT_FRAGILE_GREED">Give Fragile Assassin's Mark charm?</Text>
+
+	<Text name="PROMPT_FOCUS_EXPLAINER1A">Gain ADRENALINE by attacking enemies</Text>
+	<Text name="PROMPT_FOCUS_EXPLAINER1B">Once ADRENALINE is full</Text>
+	<Text name="PROMPT_FOCUS_EXPLAINER2">To quick reload and convert ADRENALINE to SOUL.</Text>
+	<Text name="INV_DESC_SPELL_FOCUS">Fill your ADRENALINE bar to its maximum capacity to enable shell repairing.$$Continue doing damage against enemies to heal lost health.</Text>
+
+	<Text name="PROMPT_FIREBALL">...</Text>
+
+	<Text name="NAILSMITH_MEET_3">After a Nailsmith are you? Well you've found one. I'm not much for talk, but if its a nail that needs repair then you've come to the right bug.#Hmm you seem to be carrying one of those things, I'm not too experienced repairing them but I can give it a try.#Your own nail is in quite a sorry state. It's obviously not one of mine. Still, anything can be refined with enough effort and skill, even with a broken blade or a gun.</Text>
+	<Text name="NAILSMITH_OFFER_ORE">I see you have some Pale Ore. A rare, fine metal, that. Give me the ore and some Geo for my efforts, and I'll reforge your nail and your gun to make it stronger.</Text>
+	<Text name="NAILSMITH_COMPLETE_1">There we go. The reforging is complete.#I've honed your nail's edge and your gun's receiver. You'll find it much stronger than it used to be.#Head out there and test its strength against your foes.</Text>
+	<Text name="NAILSMITH_COMPLETE_2">There we go. The reforging is complete.#I've added a channel to your nail and refitted the spring on your gun. It should cut and shoot much more efficiently. You'll find it stronger than it used to be.#Head out there and test your weapons against your foes.</Text>
+	<Text name="NAILSMITH_COMPLETE_3">Here we are. The reforging is complete.#I've modified the nail to spiral form and replaced the barrel. A very tricky task it was. You'll find it stronger than ever before.#Off you go now. Cut and shoot your way forward.</Text>
+	<Text name="NAILSMITH_COMPLETE_4">It's done. The reforging is done.#Your nail and gun is much stronger than it used to be. As strong as it could ever be.#In only your weapons have I seen such potential. Finally, I behold the majesty of a Pure Nail, and the Avtomat. #To think this moment has come upon me so soon...#...I... I must step outside a moment...</Text>
+	<Text name="NAILSMITH_NEED_ORE1">If you bring me a piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
+	<Text name="NAILSMITH_NEED_ORE2">If you bring me two piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
+	<Text name="NAILSMITH_NEED_ORE3">If you bring me three piece of Pale Ore, I can forge it into your nail and gun to make them stronger still</Text>
+
+	<Text name="HORNET_OUTSKIRTS_DEFEAT">...So strong...#Or maybe I shouldn't have brought a needle to a gun fight, but regardless.#You could do it, if you had the will or a 7.62mm assault rifle.#But could you raise your gun once knowing its tragic conception? And knowing yourself?...#Then do it, Ghost of Hallownest! Head onward. Burn that mark upon your shell and claim yourself as King.</Text>
+	<Text name="HORNET_OUTSKIRTS_DEFEAT"></Text>
+
+	<Text name="INV_NAME_SPELL_FIREBALL1">ADRENALINE POTENCY</Text>
+	<Text name="INV_DESC_SPELL_FIREBALL1">You can swap directional fire modes.$You have learned the control of ADRENALINE.$Passively, your ADRENALINE generation has been moderately improved.</Text>
+	<Text name="INV_NAME_SPELL_FIREBALL2">ADRENALINE MASTERY</Text>
+	<Text name="INV_DESC_SPELL_FIREBALL2">You can swap directional fire modes.$You have mastered the control of ADRENALINE.$Passively, your ADRENALINE generation has been greatly improved.</Text>
+
+	<Text name="INV_NAME_SPELL_QUAKE1">EVASIVE ACTION</Text>
+	<Text name="INV_DESC_SPELL_QUAKE1">Slam down and perform your defensive ability.$BREACHERS: Soul Crash$SABOTEUR: Spore Pulse$OBSERVER: Danger Close</Text>
+	<Text name="INV_NAME_SPELL_QUAKE2">DEFENSIVE MANEUVER</Text>
+	<Text name="INV_DESC_SPELL_QUAKE2">Slam down and perform your defensive ability.$BREACHERS: Soul Crash$SABOTEUR: Spore Pulse$OBSERVER: Danger Close</Text>
+
+	<Text name="INV_NAME_SPELL_SCREAM1">ADRENAL OVERCHARGE</Text>
+	<Text name="INV_DESC_SPELL_SCREAM1">Scream and call down your most destructive ability.$BREACHERS: Shrapnel Targeting$SABOTEUR: Sulphur Burst$OBSERVER: Air Barrage</Text>
+	<Text name="INV_NAME_SPELL_SCREAM2">ADRENAL OVERLOAD</Text>
+	<Text name="INV_DESC_SPELL_SCREAM2">Scream and call down your most destructive ability.$BREACHERS: Shrapnel Targeting$SABOTEUR: Sulphur Burst$OBSERVER: Air Barrage</Text>
+
+	<Text name="GET_ITEM_INTRO_2">Acquired</Text>
+
+	<Text name="GET_FIREBALL_1">Passively increases ADRENALINE build up by a moderate amount.</Text>
+	<Text name="GET_FIREBALL_2">Use ADRENALINE to unleash abilities and to empower yourself. Does not need to be activated</Text>
+	<Text name="GET_FIREBALL2_1">Passively increases ADRENALINE build up by a great amount.</Text>
+	<Text name="GET_FIREBALL2_2">Use ADRENALINE to unleash abilities and to empower yourself. Does not need to be activated</Text>
+
+	<Text name="GET_QUAKE_1">Slam the ground, consuming adrenaline and unleashing your defensive ability.</Text>
+	<Text name="GET_QUAKE_2">Defensive abilities differs on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
+	<Text name="GET_QUAKE2_1">Slam the ground, consuming adrenaline and unleashing your defensive ability.</Text>
+	<Text name="GET_QUAKE2_2">Defensive abilities differs on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
+
+	<Text name="GET_SCREAM_1">To unleash your most powerful ability.</Text>
+	<Text name="GET_SCREAM_2">These abilities differ on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
+	<Text name="GET_SCREAM2_1">to activate your SOUL shard.</Text>
+	<Text name="GET_SCREAM2_2">These abilities differ on each class, and its power dependent on the amount of ADRENALINE consumed.</Text>
+
+	<Text name="GAME_TITLE">HOLLOW POINT</Text>
 </TextChanges>
